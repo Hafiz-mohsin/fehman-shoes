@@ -1,144 +1,129 @@
-<footer class="footer appear-animate" data-animation-name="fadeIn" data-animation-delay="100">
-    <div class="footer-top bg-dark">
-        <div class="container d-flex align-items-center justify-content-between flex-wrap">
-            <div class="widget-newsletter pl-3 d-md-flex align-items-center">
-                <div class="widget-newsletter-info">
-                    <h5 class="widget-newsletter-title text-uppercase m-b-1 text-white">SIGN UP TO NEWSLETTER
-                    </h5>
-                    <p class="widget-newsletter-content font2 mb-0">Get all the latest information..</p>
-                </div>
-                <form action="#" class="mb-0">
-                    <div class="footer-submit-wrapper d-flex  mt-2 mb-1 mt-md-0 mb-md-0">
-                        <input type="email" class="form-control bg-dark" placeholder="Enter your e-mail address" size="40" required>
-                        <button type="submit" class="btn btn-dark btn-sm">Submit</button>
-                    </div>
-                </form>
+<footer class="footer bg-dark position-relative">
+    <div class="footer-middle">
+        <div class="container position-static">
+            <div class="footer-ribbon bg-primary text-white ls-0">
+                Get in touch
             </div>
-        </div>
-
-        <div class="porto-content-box">
-            <h4>20$ OFF</h4>
-            <h3>GOPORTO</h3>
-            <span>USE COUPONS</span>
-
-            <a href="javascript:;" class="box-close">×</a>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="footer-middle">
+            <!-- End .footer-ribbon -->
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="info-box info-box-icon-left text-white justify-content-start">
-                        <i class="icon-shipping"></i>
-
-                        <div class="info-box-content">
-                            <h4>FREE SHIPPING &amp; RETURN</h4>
-                            <p class="font2">Free shipping on all orders over $99.</p>
-                        </div>
-                        <!-- End .info-box-content -->
-                    </div>
-                    <!-- End .info-box -->
-
-                    <div class="info-box info-box-icon-left text-white justify-content-start">
-                        <i class="icon-money"></i>
-
-                        <div class="info-box-content">
-                            <h4>MONEY BACK GUARANTEE</h4>
-                            <p class="font2">100% money back guarantee</p>
-                        </div>
-                        <!-- End .info-box-content -->
-                    </div>
-                    <!-- End .info-box -->
-
-                    <div class="info-box info-box-icon-left text-white justify-content-start">
-                        <i class="icon-support"></i>
-
-                        <div class="info-box-content">
-                            <h4>LIVE SUPPORT</h4>
-                            <p class="font2">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <!-- End .info-box-content -->
-                    </div>
-                    <!-- End .info-box -->
-                </div>
-
-                <div class="col-md-6 col-lg-2">
+                <div class="col-lg-3 col-md-4">
                     <div class="widget">
-                        <h3 class="widget-title">Account</h3>
-                        <div class="widget-content">
-                            <ul>
-                                <li><a href="dashboard.html">My Account</a></li>
-                                <li><a href="#">Track Your Order</a></li>
-                                <li><a href="#">Payment Methods</a></li>
-                                <li><a href="#">Shipping Guide</a></li>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Product Support</a></li>
-                                <li><a href="#">Privacy</a></li>
-                            </ul>
+                        <h4 class="widget-title font-weight-bold">Contact Info</h4>
+                        <ul class="contact-info">
+                            <li>
+                                <span class="contact-info-label">Address:</span>123 Street Name, City, England
+                            </li>
+                            <li>
+                                <span class="contact-info-label">Phone:</span><a href="tel:">(123)
+                                    456-7890</a>
+                            </li>
+                            <li>
+                                <span class="contact-info-label">Email:</span> <a href="https://portotheme.com/cdn-cgi/l/email-protection#d4b9b5bdb894b1acb5b9a4b8b1fab7bbb9"><span class="__cf_email__" data-cfemail="95f8f4fcf9d5f0edf4f8e5f9f0bbf6faf8">[email&#160;protected]</span></a>
+                            </li>
+                            <li>
+                                <span class="contact-info-label">Working Days/Hours:</span> Mon - Sun / 9:00 AM - 8:00 PM
+                            </li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon social-facebook icon-facebook" target="_blank" title="Facebook"></a>
+                            <a href="#" class="social-icon social-twitter icon-twitter" target="_blank" title="Twitter"></a>
+                            <a href="#" class="social-icon social-linkedin fab fa-linkedin-in" target="_blank" title="Linkedin"></a>
                         </div>
+                        <!-- End .social-icons -->
                     </div>
+                    <!-- End .widget -->
                 </div>
+                <!-- End .col-lg-3 -->
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="widget">
-                        <h3 class="widget-title">About</h3>
-                        <div class="widget-content">
-                            <ul>
-                                <li><a href="about.html">About Porto</a></li>
-                                <li><a href="#">Our Guarantees</a></li>
-                                <li><a href="#">Terms And Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Return Policy</a></li>
-                                <li><a href="#">Intellectual Property Claims</a></li>
-                                <li><a href="#">Site Map</a></li>
-                            </ul>
+                <div class="col-lg-9 col-md-8">
+                    <div class="widget widget-newsletter">
+                        <h4 class="widget-title">Subscribe newsletter</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-12 mb-1">
+                                <p class="mb-0">Get all the latest information on Events, Sales and Offers. Sign up for newsletter today.</p>
+                            </div>
+                            <!-- End .col-lg-6 -->
+
+                            <div class="col-lg-6 col-md-12 mb-1">
+                                <form action="#" class="d-flex mb-0 w-100">
+                                    <input type="email" class="form-control mb-0" placeholder="Email Address" required>
+
+                                    <input type="submit" class="btn btn-primary shadow-none" value="Subscribe">
+                                </form>
+                            </div>
+                            <!-- End .col-lg-6 -->
                         </div>
+                        <!-- End .row -->
                     </div>
-                </div>
+                    <!-- End .widget -->
 
-                <div class="col-lg-3">
-                    <div class="widget-group">
-                        <div class="widget mb-3">
-                            <h3 class="widget-title">Follow Us</h3>
-                            <div class="widget-content">
-                                <div class="social-icons ml-1">
-                                    <a href="#" class="social-icon social-facebook" target="_blank" title="Facebook">
-                                        <i class="icon-facebook"></i>
-                                    </a>
-                                    <a href="#" class="social-icon social-twitter" target="_blank" title="Twitter">
-                                        <i class="icon-twitter"></i>
-                                    </a>
-                                    <a href="#" class="social-icon social-instagram" target="_blank" title="instagram">
-                                        <i class="icon-instagram"></i>
-                                    </a>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="widget">
+                                <h4 class="widget-title mb-1">Customer Service</h4>
 
-                                    <a href="#" class="social-icon social-linkedin" target="_blank" title="Linkedin">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
+                                <div class="links link-parts row">
+                                    <ul class="link-part col-lg-6 col-md-12 mb-0">
+                                        <li><a href="demo2-about.html">About us</a></li>
+                                        <li><a href="demo2-contact.html">Contact us</a></li>
+                                        <li><a href="login.html">My account</a></li>
+                                    </ul>
+                                    <ul class="link-part col-lg-6 col-md-12">
+                                        <li><a href="#">Order history</a></li>
+                                        <li><a href="#">Advanced search</a></li>
+                                        <li><a href="login.html">Login</a></li>
+                                    </ul>
                                 </div>
                             </div>
+                            <!-- End .widget -->
                         </div>
+                        <!-- End .col-sm-6 -->
 
-                        <div class="widget">
-                            <h3 class="widget-title">Payment Methods</h3>
-                            <div class="widget-content">
-                                <img src="assets/images/demoes/demo32/payments_long.png" alt="payment image" width="201" height="31">
+                        <div class="col-sm-7">
+                            <div class="widget">
+                                <h4 class="widget-title mb-1">About Us</h4>
+
+                                <div class="links link-parts row">
+                                    <ul class="link-part col-lg-6 col-md-12 mb-0">
+                                        <li><a href="#">Super Fast Html Template</a></li>
+                                        <li><a href="#">1st Fully working Ajax Theme</a></li>
+                                        <li><a href="#">36 Unique Shop Layouts</a></li>
+                                    </ul>
+                                    <ul class="link-part col-lg-6 col-md-12">
+                                        <li><a href="#">Powerful Admin Panel</a></li>
+                                        <li><a href="#">Mobile & Retina Optimized</a></li>
+                                    </ul>
+                                </div>
                             </div>
+                            <!-- End .widget -->
                         </div>
+                        <!-- End .col-sm-6 -->
                     </div>
+                    <!-- End .row -->
+                </div>
+                <!-- End .col-lg-9 -->
+            </div>
+            <!-- End .row -->
+        </div>
+        <!-- End .container -->
+    </div>
+    <!-- End .footer-middle -->
+
+    <div class="container">
+        <div class="footer-bottom d-sm-flex align-items-center">
+            <div class="footer-left">
+                <span class="footer-copyright">© Porto eCommerce. 2021. All Rights Reserved</span>
+            </div>
+
+            <div class="footer-right ml-auto mt-1 mt-sm-0">
+                <div class="payment-icons mr-0">
+                    <span class="payment-icon visa" style="background-image: url(assets/images/payments/payment-visa.svg)"></span>
+                    <span class="payment-icon paypal" style="background-image: url(assets/images/payments/payment-paypal.svg)"></span>
+                    <span class="payment-icon stripe" style="background-image: url(assets/images/payments/payment-stripe.png)"></span>
+                    <span class="payment-icon verisign" style="background-image:  url(assets/images/payments/payment-verisign.svg)"></span>
                 </div>
             </div>
         </div>
-
-        <div class="footer-bottom flex-column flex-sm-row">
-            <p>Porto eCommerce. © 2021. All Rights Reserved</p>
-            <ul>
-                <li><a href="#">Affiliates</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-            </ul>
-        </div>
     </div>
+    <!-- End .footer-bottom -->
 </footer>
-<!-- End .footer -->
