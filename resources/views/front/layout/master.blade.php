@@ -38,6 +38,7 @@
 
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/demo2.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/vendor/fontawesome-free/css/all.min.css">
 </head>
 
