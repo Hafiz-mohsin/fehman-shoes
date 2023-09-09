@@ -11,12 +11,12 @@
                     <a href="#">Links</a>
                     <div class="header-menu">
                         <ul>
-                            <li><a href="login.html">My Account</a></li>
-                            <li><a href="demo2-contact.html">Contact Us</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="wishlist.html">My Wishlist</a></li>
-                            <li><a href="cart.html">Cart</a></li>
-                            <li><a href="#" class="login-link">Log In</a></li>
+                            <li><a href="{{ route('front.dashboard') }}">My Account</a></li>
+                            <li><a href="{{ route('front.contact') }}">Contact Us</a></li>
+                            <li><a href="{{ route('front.blog') }}">Blog</a></li>
+                            <li><a href="{{ route('front.wishlist') }}">My Wishlist</a></li>
+                            <li><a href="{{ route('front.cart') }}">Cart</a></li>
+                            <li><a href="{{ route('front.login') }}" class="login-link">Log In</a></li>
                         </ul>
                     </div>
                     <!-- End .header-menu -->
@@ -53,9 +53,9 @@
                 <span class="separator"></span>
 
                 <div class="social-icons">
-                    <a href="#" class="social-icon social-facebook icon-facebook" target="_blank"></a>
-                    <a href="#" class="social-icon social-twitter icon-twitter" target="_blank"></a>
-                    <a href="#" class="social-icon social-instagram icon-instagram" target="_blank"></a>
+                    <a href="https://www.google.com/search?sca_esv=563740992&rlz=1C1CHBD_enPK986PK986&sxsrf=AB5stBgvBrU5fBAGIVjVdojtsPz7scBqSw:1694185341040&q=babu+bhai+img&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjzpL6bpJuBAxW-QfEDHen7BFUQ0pQJegQIDBAB&biw=1366&bih=651&dpr=1#imgrc=N1ZMlR5E8r2WOM" class="social-icon social-facebook icon-facebook" target="_blank"></a>
+                    <a href="https://www.google.com/search?sca_esv=563740992&rlz=1C1CHBD_enPK986PK986&sxsrf=AB5stBgvBrU5fBAGIVjVdojtsPz7scBqSw:1694185341040&q=babu+bhai+img&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjzpL6bpJuBAxW-QfEDHen7BFUQ0pQJegQIDBAB&biw=1366&bih=651&dpr=1#imgrc=N1ZMlR5E8r2WOM" class="social-icon social-twitter icon-twitter" target="_blank"></a>
+                    <a href="https://www.google.com/search?sca_esv=563740992&rlz=1C1CHBD_enPK986PK986&sxsrf=AB5stBgvBrU5fBAGIVjVdojtsPz7scBqSw:1694185341040&q=babu+bhai+img&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjzpL6bpJuBAxW-QfEDHen7BFUQ0pQJegQIDBAB&biw=1366&bih=651&dpr=1#imgrc=N1ZMlR5E8r2WOM" class="social-icon social-instagram icon-instagram" target="_blank"></a>
                 </div>
                 <!-- End .social-icons -->
             </div>
@@ -115,13 +115,13 @@
 
                 <div class="header-contact d-none d-lg-flex pl-4 ml-3 mr-xl-5">
                     <img alt="phone" src="assets/images/phone-white.png" width="30" height="30" class="pb-1">
-                    <h6>Call us now<a href="tel:#" class="font1">+123 5678 890</a></h6>
+                    <h6>Call us now<a href="tel:#" class="font1">03243244182</a></h6>
                 </div>
 
-                <a href="login.html" class="header-icon d-inline-block" title="Login"><i
+                <a href="{{ route('front.login') }}" class="header-icon d-inline-block" title="Login"><i
                         class="icon-user-2"></i></a>
 
-                <a href="wishlist.html" class="header-icon d-inline-block" title="Wishlist"><i
+                <a href="{{ route('front.wishlist') }}" class="header-icon d-inline-block" title="Wishlist"><i
                         class="icon-wishlist-2"></i></a>
 
                 <div class="dropdown cart-dropdown">
@@ -215,9 +215,9 @@
                             <!-- End .dropdown-cart-total -->
 
                             <div class="dropdown-cart-action">
-                                <a href="cart.html" class="btn btn-gray btn-block view-cart">View
+                                <a href="{{ route('front.cart') }}" class="btn btn-gray btn-block view-cart">View
                                     Cart</a>
-                                <a href="checkout.html" class="btn btn-dark btn-block">Checkout</a>
+                                <a href="{{ route('front.checkout') }}" class="btn btn-dark btn-block">Checkout</a>
                             </div>
                             <!-- End .dropdown-cart-total -->
                         </div>

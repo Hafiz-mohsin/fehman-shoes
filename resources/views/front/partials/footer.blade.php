@@ -18,7 +18,7 @@
                                     456-7890</a>
                             </li>
                             <li>
-                                <span class="contact-info-label">Email:</span> <a href="https://portotheme.com/cdn-cgi/l/email-protection#d4b9b5bdb894b1acb5b9a4b8b1fab7bbb9"><span class="__cf_email__" data-cfemail="95f8f4fcf9d5f0edf4f8e5f9f0bbf6faf8">[email&#160;protected]</span></a>
+                                <span class="contact-info-label">Email:</span> <a href="{{ route('front.contact') }}"><span class="__cf_email__" data-cfemail="95f8f4fcf9d5f0edf4f8e5f9f0bbf6faf8">[email&#160;protected]</span></a>
                             </li>
                             <li>
                                 <span class="contact-info-label">Working Days/Hours:</span> Mon - Sun / 9:00 AM - 8:00 PM
@@ -64,15 +64,11 @@
 
                                 <div class="links link-parts row">
                                     <ul class="link-part col-lg-6 col-md-12 mb-0">
-                                        <li><a href="demo2-about.html">About us</a></li>
-                                        <li><a href="demo2-contact.html">Contact us</a></li>
-                                        <li><a href="login.html">My account</a></li>
+                                        <li><a href="{{ route('front.about') }}">About us</a></li>
+                                        <li><a href="{{ route('front.contact') }}">Contact us</a></li>
+                                        <li><a href="{{ route('front.dashboard') }}">My account</a></li>
                                     </ul>
-                                    <ul class="link-part col-lg-6 col-md-12">
-                                        <li><a href="#">Order history</a></li>
-                                        <li><a href="#">Advanced search</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                    </ul>
+
                                 </div>
                             </div>
                             <!-- End .widget -->
@@ -88,10 +84,6 @@
                                         <li><a href="#">Super Fast Html Template</a></li>
                                         <li><a href="#">1st Fully working Ajax Theme</a></li>
                                         <li><a href="#">36 Unique Shop Layouts</a></li>
-                                    </ul>
-                                    <ul class="link-part col-lg-6 col-md-12">
-                                        <li><a href="#">Powerful Admin Panel</a></li>
-                                        <li><a href="#">Mobile & Retina Optimized</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -112,7 +104,7 @@
     <div class="container">
         <div class="footer-bottom d-sm-flex align-items-center">
             <div class="footer-left">
-                <span class="footer-copyright">© Porto eCommerce. 2021. All Rights Reserved</span>
+                <span class="footer-copyright">© Moshin barkti. 2023. All Rights Reserved</span>
             </div>
 
             <div class="footer-right ml-auto mt-1 mt-sm-0">

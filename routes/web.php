@@ -27,6 +27,10 @@ Route::get('about', 'Front\AboutController@index')->name('about');
 Route::get('contact', 'Front\ContactController@index')->name('contact');
 Route::get('wishlist', 'Front\WishlistController@index')->name('wishlist');
 Route::get('login', 'Front\LoginController@index')->name('login');
-Route::get('dashboard', 'Front\DashboardController@index')->name('dashsboard');
+Route::get('dashboard', 'Front\DashboardController@index')->name('dashboard');
+Route::get('forgotpassword', 'Front\ForgotpaswordController@index')->name('forgotpassword');
+Route::get('singleproduct', 'Front\SingleproductController@index')->name('singleproduct');
+Route::get('cart', 'Front\CartController@index')->name('cart');
+Route::get('checkout', 'Front\CheckoutController@index')->name('checkout');
 
 });

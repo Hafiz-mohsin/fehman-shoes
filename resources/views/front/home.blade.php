@@ -9,14 +9,14 @@
 
                     <div class="side-menu-body mb-2 px-3 mx-3">
                         <ul class="side-menu pb-1">
-                            <li><a href="demo2-shop.html"><i class="icon-category-fashion"></i>Fashion</a></li>
-                            <li><a href="demo2-shop.html"><i
+                            <li><a href="{{ route('front.shop') }}"><i class="icon-category-fashion"></i>Fashion</a></li>
+                            <li><a href="{{ route('front.shop') }}"><i
                                         class="icon-category-electronics"></i>Electronics</a></li>
-                            <li><a href="demo2-shop.html"><i class="icon-category-gifts"></i>Gifts</a></li>
-                            <li><a href="demo2-shop.html"><i class="icon-category-garden"></i>Home &amp;
+                            <li><a href="{{ route('front.shop') }}"><i class="icon-category-gifts"></i>Gifts</a></li>
+                            <li><a href="{{ route('front.shop') }}"><i class="icon-category-garden"></i>Home &amp;
                                     Garden</a></li>
-                            <li><a href="demo2-shop.html"><i class="icon-category-music"></i>Music</a></li>
-                            <li><a href="demo2-shop.html"><i class="icon-cat-sport"></i>Sports</a></li>
+                            <li><a href="{{ route('front.shop') }}"><i class="icon-category-music"></i>Music</a></li>
+                            <li><a href="{{ route('front.shop') }}"><i class="icon-cat-sport"></i>Sports</a></li>
                         </ul>
 
                         <a href="#" class="btn btn-block btn-dark btn-lg px-0 ls-10">Huge Sale -
@@ -42,7 +42,7 @@
                             <h3 class="text-white text-uppercase">30% Off</h3>
                             <h5 class="text-white text-uppercase d-inline-flex ls-n-20 mb-0">Starting At <b class="coupon-sale-text text-secondary bg-white">$<em
                                         class="align-text-top">199</em>99</b></h5>
-                            <a href="demo2-shop.html" class="btn btn-dark">Get Yours!</a>
+                            <a href="{{ route('front.shop') }}" class="btn btn-dark">Get Yours!</a>
                         </div>
                         <!-- End .banner-layer -->
                     </div>
@@ -57,7 +57,7 @@
                                 <b>$<em>299</em>99</b>
                             </h5>
 
-                            <a href="demo2-shop.html" class="btn btn-dark ls-10">Get Yours!</a>
+                            <a href="{{ route('front.shop') }}" class="btn btn-dark ls-10">Get Yours!</a>
                         </div>
                         <!-- End .banner-layer -->
                     </div>
@@ -72,7 +72,7 @@
                             <h5 class="d-inline-block mb-0 align-top mr-4 pr-3">Starting At
                                 <b>$<em>299</em>99</b>
                             </h5>
-                            <a href="demo2-shop.html" class="btn btn-dark">Get Yours!</a>
+                            <a href="{{ route('front.shop') }}" class="btn btn-dark">Get Yours!</a>
                         </div>
                         <!-- End .banner-layer -->
                     </div>
@@ -151,7 +151,7 @@
                             Exclusive COUPON
                         </h4>
                         <h5 class="coupon-sale-text text-white ls-n-10 p-0"><i class="ls-0">UP TO</i><b class="text-dark">$100</b> OFF</h5>
-                        <a href="demo2-shop.html" class="btn btn-block btn-dark btn-black">Get Yours!</a>
+                        <a href="{{ route('front.shop') }}" class="btn btn-block btn-dark btn-black">Get Yours!</a>
                     </div>
                 </div>
             </div>
@@ -165,7 +165,7 @@
                     <h2 class="m-b-2 text-secondary ls-n-20">Flash Sale</h2>
                     <h3 class="m-b-1 ls-n-20">Top Brands<br>Summer Sunglasses</h3>
                     <h4 class="text-white ls-n-20">Starting<br>AT <sup>$</sup>199<sup>99</sup></h4>
-                    <a href="demo2-shop.html" class="btn btn-light ls-10">View Sale</a>
+                    <a href="{{ route('front.shop') }}" class="btn btn-light ls-10">View Sale</a>
                 </div>
             </div>
             <!-- End .banner -->
@@ -181,7 +181,7 @@
                     <h5 class="pt-1">Check our discounts</h5>
                 </div>
                 <div class="banner-layer banner-layer-bottom">
-                    <a href="demo2-shop.html" class="btn btn-dark">Shop Now!</a>
+                    <a href="{{ route('front.shop') }}" class="btn btn-dark">Shop Now!</a>
                 </div>
             </div>
             <!-- End .banner -->
@@ -194,7 +194,7 @@
                     <h3 class="ls-0">Trending</h3>
                     <h2 class="m-b-3 ls-10 text-transform-none">Hot Sales</h2>
                     <h4 class="m-b-3 text-secondary ls-0">Starting at $99</h4>
-                    <a href="demo2-shop.html" class="btn btn-dark ls-10">Buy Now!</a>
+                    <a href="{{ route('front.shop') }}" class="btn btn-dark ls-10">Buy Now!</a>
                 </div>
             </div>
             <!-- End .banner -->
@@ -206,7 +206,7 @@
                 <div class="banner-layer banner-layer-middle">
                     <h3 class="m-b-2 text-transform-none">Exclusive Shoes</h3>
                     <h4 class="m-b-3">50% Off</h4>
-                    <a href="demo2-shop.html" class="btn btn-dark ls-10">Get Yours!</a>
+                    <a href="{{ route('front.shop') }}" class="btn btn-dark ls-10">Get Yours!</a>
                 </div>
             </div>
             <!-- End .banner -->
@@ -239,7 +239,7 @@
                     <h4 class="text-body">* limited time only</h4>
                 </div>
                 <div class="banner-layer banner-layer-bottom text-center">
-                    <a href="demo2-shop.html" class="btn btn-secondary">Buy Now!</a>
+                    <a href="{{ route('front.shop') }}" class="btn btn-secondary">Buy Now!</a>
                 </div>
             </div>
             <!-- End .banner -->
@@ -251,7 +251,7 @@
                 <div class="banner-layer banner-layer-middle text-center">
                     <h3 class="m-b-1 ls-0">Deal Promos</h3>
                     <h4 class="m-b-3 ls-0 text-body">Starting at $99</h4>
-                    <a href="demo2-shop.html" class="btn btn-dark ls-10">Buy Now!</a>
+                    <a href="{{ route('front.shop') }}" class="btn btn-dark ls-10">Buy Now!</a>
                 </div>
             </div>
             <!-- End .banner -->
@@ -289,7 +289,7 @@
                     <div class="product-details">
                         <div class="category-wrap">
                             <div class="category-list">
-                                <a href="demo2-shop.html" class="product-category">category</a>
+                                <a href="{{ route('front.shop') }}" class="product-category">category</a>
                             </div>
                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                     class="icon-heart"></i></a>
@@ -330,7 +330,7 @@
                     <div class="product-details">
                         <div class="category-wrap">
                             <div class="category-list">
-                                <a href="demo2-shop.html" class="product-category">category</a>
+                                <a href="{{ route('front.shop') }}" class="product-category">category</a>
                             </div>
                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                     class="icon-heart"></i></a>
@@ -370,7 +370,7 @@
                     <div class="product-details">
                         <div class="category-wrap">
                             <div class="category-list">
-                                <a href="demo2-shop.html" class="product-category">category</a>
+                                <a href="{{ route('front.shop') }}" class="product-category">category</a>
                             </div>
                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                     class="icon-heart"></i></a>
@@ -410,7 +410,7 @@
                     <div class="product-details">
                         <div class="category-wrap">
                             <div class="category-list">
-                                <a href="demo2-shop.html" class="product-category">category</a>
+                                <a href="{{ route('front.shop') }}" class="product-category">category</a>
                             </div>
                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                     class="icon-heart"></i></a>
@@ -450,7 +450,7 @@
                     <div class="product-details">
                         <div class="category-wrap">
                             <div class="category-list">
-                                <a href="demo2-shop.html" class="product-category">category</a>
+                                <a href="{{ route('front.shop') }}" class="product-category">category</a>
                             </div>
                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                     class="icon-heart"></i></a>
