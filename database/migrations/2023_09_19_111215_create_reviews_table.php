@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNewsLettersTable extends Migration
+class CreateReviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreateNewsLettersTable extends Migration
      */
     public function up()
     {
-        Schema::create('news_letters', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->string('email')->nullable();
+            $table->unsignedInteger('product_id')->nullable();
+            $table->unsignedInteger('user_id')->nullable();
+            $table->string('title')->nullable();
+            $table->text('description')->nullable();
+            $table->integer('number')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +31,6 @@ class CreateNewsLettersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('news_letters');
+        Schema::dropIfExists('reviews');
     }
 }

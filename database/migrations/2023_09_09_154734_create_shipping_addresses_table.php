@@ -15,6 +15,14 @@ class CreateShippingAddressesTable extends Migration
     {
         Schema::create('shipping_addresses', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable();
+            $table->string('slug')->nullable();
+            $table->string('company')->nullable();
+            $table->string('country')->nullable();
+            $table->text('adress')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->double('zip_code')->nullable();
             $table->timestamps();
         });
     }

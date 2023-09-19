@@ -15,6 +15,11 @@ class CreateContactQueriesTable extends Migration
     {
         Schema::create('contact_queries', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable();
+            $table->string('slug')->nullable();
+            $table->string('email')->nullable();
+            $table->text('massage')->nullable();
+            $table->string('subject')->nullable();
             $table->timestamps();
         });
     }

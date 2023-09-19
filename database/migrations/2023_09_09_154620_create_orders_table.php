@@ -15,6 +15,11 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->double('odder_total')->nullable();
+            $table->date('date')->nullable();
+            $table->boolean('status')->nullable();
+            $table->double('total_price')->nullable();
+            $table->text('note')->nullable();
             $table->timestamps();
         });
     }

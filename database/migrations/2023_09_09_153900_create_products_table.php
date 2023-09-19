@@ -20,6 +20,11 @@ class CreateProductsTable extends Migration
             $table->text('short_decription', 50)->nullable();
             $table->text('long_description', 150)->nullable();
             $table->double('price');
+            $table->string('category_id',)->nullable();
+            $table->boolean('status')->default(0);
+            $table->string('type')->nullable();
+            $table->string('brand_id')->nullable();
+            $table->string('thumbnils')->nullable();
             $table->timestamps();
         });
     }

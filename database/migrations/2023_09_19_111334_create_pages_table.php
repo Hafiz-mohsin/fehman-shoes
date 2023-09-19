@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNewsLettersTable extends Migration
+class CreatePagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateNewsLettersTable extends Migration
      */
     public function up()
     {
-        Schema::create('news_letters', function (Blueprint $table) {
+        Schema::create('pages', function (Blueprint $table) {
             $table->id();
-            $table->string('email')->nullable();
+            $table->string('title')->nullable();
+            $table->string('content')->nullable();
+            $table->text('description')->nullable();
+            $table->boolean('status')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ class CreateNewsLettersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('news_letters');
+        Schema::dropIfExists('pages');
     }
 }
