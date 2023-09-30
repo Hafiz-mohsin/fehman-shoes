@@ -20,8 +20,7 @@ class CreateBlogsTable extends Migration
             $table->text('short_desciption')->nullable();
             $table->text('long_description')->nullable();
             $table->string('added_by')->nullable();
-            $table->string('admin_id')->nullable();
-           table->timestamps();
+            $table->unsignedInteger('admin_id')->nullable();
             $table->timestamps();
         });
     }

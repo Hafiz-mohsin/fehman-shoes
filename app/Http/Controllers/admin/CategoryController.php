@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Admin;
 
 use App\Blog;
+use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +16,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::get();
-        return view('admin.blogs.index', compact('blogs'));
+        $categories = Category::get();
+        return view('admin.categories.index', compact('categories'));
     }
 
     /**
@@ -26,7 +27,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-       return view('admin.blogs.create');
+        return view('admin.categories.create');
     }
 
     /**
@@ -38,7 +39,6 @@ class BlogController extends Controller
     public function store(Request $request)
     {
 
-
         $fileName = null;
         if (request()->hasFile('image'))
         {
@@ -48,16 +48,13 @@ class BlogController extends Controller
         }
 
 
-        Blog::create([
+        Category::create([
             'title' => request()->get('title'),
+            'slug' =>request()->get('slug'),
             'image' => $fileName,
-            'short_desciption' =>request()->get('short_desciption'),
-            'long_description' =>request()->get('long_description'),
-            'added_by' =>request()->get('added_by'),
-            'admin_id'=>request()->get('1'),
+            'status' =>request()->get('status'),
         ]);
-        return redirect()->route('admin.blog.index');
-
+        return redirect()->route('admin.category.index');
     }
 
     /**
@@ -79,8 +76,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $blog = Blog::find($id);
-        return view('admin.blogs.edit',compact('blog'));
+        $category = Category::find($id);
+        return view('admin.categories.edit',compact('category'));
     }
 
     /**
@@ -92,7 +89,7 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $blog=Blog::find($id);
+        $category=Category::find($id);
         $fileName = null;
         if (request()->hasFile('image'))
         {
@@ -101,19 +98,13 @@ class BlogController extends Controller
             $file->move('./uploads/', $fileName);
         }
 
-        $blog->update([
+        $category->update([
         'title' => request()->get('title'),
+        'slug' => request()->get('slug'),
         'image' => $fileName,
-        'short_desciption' => request()->get('short_desciption'),
-        'long_description' => request()->get('long_description'),
-        'added_by' => request()->get('added_by')
+        'status' => request()->get('status'),
         ]);
-        $notification = [
-            'message' => 'Record Inserted Successfully!',
-            'alert-type' => 'success',
-        ];
-
-        return redirect('/admin/blog');
+        return redirect('/admin/category');
     }
 
     /**
@@ -124,9 +115,9 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        $blogs=blog::find($id);
+        $categories=category::find($id);
 
-        $blogs->delete();
-        return redirect()->to('/admin/blog');
+        $categories->delete();
+        return redirect()->to('/admin/category');
     }
 }

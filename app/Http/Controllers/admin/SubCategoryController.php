@@ -1,12 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Admin;
 
-use App\Blog;
+use App\Category;
 use App\Http\Controllers\Controller;
+use App\SubCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
-class BlogController extends Controller
+class SubCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +17,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::get();
-        return view('admin.blogs.index', compact('blogs'));
+
+        $sub_categories = SubCategory::get();
+        return view('admin.sub_categories.index', compact('sub_categories'));
     }
 
     /**
@@ -26,7 +29,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-       return view('admin.blogs.create');
+        $categories = Category::get();
+        return view('admin.sub_categories.create', compact('categories'));
     }
 
     /**
@@ -37,8 +41,6 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-
-
         $fileName = null;
         if (request()->hasFile('image'))
         {
@@ -48,16 +50,14 @@ class BlogController extends Controller
         }
 
 
-        Blog::create([
+        SubCategory::create([
             'title' => request()->get('title'),
+            'category_id' => request()->get('category_id'),
+            'slug' =>request()->get('slug'),
             'image' => $fileName,
-            'short_desciption' =>request()->get('short_desciption'),
-            'long_description' =>request()->get('long_description'),
-            'added_by' =>request()->get('added_by'),
-            'admin_id'=>request()->get('1'),
+            'status' =>request()->get('status'),
         ]);
-        return redirect()->route('admin.blog.index');
-
+        return redirect()->route('admin.sub_category.index');
     }
 
     /**
@@ -79,8 +79,9 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $blog = Blog::find($id);
-        return view('admin.blogs.edit',compact('blog'));
+        $categories = Category::get();
+        $sub_category = SubCategory::find($id);
+        return view('admin.sub_categories.edit',compact('sub_category' ,'categories'));
     }
 
     /**
@@ -92,7 +93,7 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $blog=Blog::find($id);
+        $sub_category=SubCategory::find($id);
         $fileName = null;
         if (request()->hasFile('image'))
         {
@@ -101,19 +102,15 @@ class BlogController extends Controller
             $file->move('./uploads/', $fileName);
         }
 
-        $blog->update([
+        $slug = Str::slug($request->title, '-');
+        $sub_category->update([
         'title' => request()->get('title'),
+        'category_id' => request()->get('category_id'),
+        'slug' => $slug,
         'image' => $fileName,
-        'short_desciption' => request()->get('short_desciption'),
-        'long_description' => request()->get('long_description'),
-        'added_by' => request()->get('added_by')
+        'status' => request()->get('status'),
         ]);
-        $notification = [
-            'message' => 'Record Inserted Successfully!',
-            'alert-type' => 'success',
-        ];
-
-        return redirect('/admin/blog');
+        return redirect('/admin/sub_category');
     }
 
     /**
@@ -124,9 +121,9 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        $blogs=blog::find($id);
+        $sub_categories=SubCategory::find($id);
 
-        $blogs->delete();
-        return redirect()->to('/admin/blog');
+        $sub_categories->delete();
+        return redirect()->to('/admin/sub_category');
     }
 }

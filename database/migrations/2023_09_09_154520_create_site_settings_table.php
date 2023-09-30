@@ -18,7 +18,7 @@ class CreateSiteSettingsTable extends Migration
             $table->string('name')->nullable();
             $table->string('slug')->nullable();
             $table->text('description')->nullable();
-            $table->varchar('phone_number')->nullable();
+            $table->string('phone_number')->nullable();
             $table->string('facebook')->nullable();
             $table->string('instagram')->nullable();
             $table->String('twitter')->nullable();

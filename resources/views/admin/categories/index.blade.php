@@ -6,7 +6,7 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Striped Table</h4>
-            <a href="{{ route('admin.blog.create') }}" class="btn btn-primary text-white me-0"><i class="fa fa-plus"></i> Create</a>
+            <a href="{{ route('admin.category.create') }}" class="btn btn-primary text-white me-0"><i class="fa fa-plus"></i> Create</a>
 
             <p class="card-description">
               Add class <code>.table-striped</code>
@@ -16,30 +16,29 @@
                 <thead>
                   <tr>
                     <th>  Title </th>
+                    <th>  slug </th>
                     <th>  Image </th>
-                    <th>  Short Description </th>
-                    <th>  Long Description </th>
-                    <th>  Added By </th>
+                    <th>  Status </th>
                     <th>  Mannage  </th>
 
 
                   </tr>
                 </thead>
                 <tbody>
-                    @foreach ($blogs as $blog )
+                    @foreach ($categories as $category )
                   <tr>
-                    <td class="py-1">  {{ $blog->title }} </td>
+                    <td class="py-1">  {{ $category->title }} </td>
+                    <td> {{ $category->slug }} </td>
                     <td>
-                        <img src="{{asset('uploads/').'/'.$blog->image}}" alt="" height='50' weight='50'>
+                        <img src="{{asset('uploads/').'/'.$category->image}}" alt="" height='50' weight='50'>
                     </td>
-                    <td> {{ $blog->short_desciption }} </td>
+
                     <td>
-                      {{ $blog->long_description }}
+                      {{ $category->status == 1 ? 'Active' : 'In Active' }}
                     </td>
-                    <td> {{$blog->added_by}} </td>
                     <td>
-                      <a href="{{ route('admin.blog.edit', $blog->id) }}" class="btn btn-info btn-flat btn-sm"> <i class="fas fa-edit"></i></a>
-                     <form action="{{ route('admin.blog.destroy', $blog->id) }}" method="post">
+                      <a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-info btn-flat btn-sm"> <i class="fas fa-edit"></i></a>
+                     <form action="{{ route('admin.category.destroy', $category->id) }}" method="post">
                         @csrf
                         @method('DELETE')
                       <button class="btn btn-danger btn-flat btn-sm"> <i class="fas fa-trash"></i></button>
