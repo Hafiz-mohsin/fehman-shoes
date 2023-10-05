@@ -26,14 +26,14 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('admin.blog.index') }}">
+        <a class="nav-link" href="{{ route('admin.brand.index') }}">
           <i class="mdi mdi-grid-large menu-icon"></i>
-          <span class="menu-title">Blogs</span>
+          <span class="menu-title">Brands</span>
         </a>
       </li> <li class="nav-item">
-        <a class="nav-link" href="{{ route('admin.blog.index') }}">
+        <a class="nav-link" href="{{ route('admin.faq.index') }}">
           <i class="mdi mdi-grid-large menu-icon"></i>
-          <span class="menu-title">Blogs</span>
+          <span class="menu-title">Faqs</span>
         </a>
       </li> <li class="nav-item">
         <a class="nav-link" href="{{ route('admin.blog.index') }}">
