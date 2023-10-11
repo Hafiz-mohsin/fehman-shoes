@@ -1,0 +1,123 @@
+@extends('admin.layout.master')
+@section('main-content')
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">product form</h4>
+          <p class="card-description">
+            make your own product
+          </p>
+         <form action="{{ route('admin.product.store') }}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="form-group">
+              <label for="title">title</label>
+              <input name="title" type="title" class="form-control" id="title" placeholder="title">
+            </div>
+            <div class="form-group">
+                <label for="title">Short Description</label>
+                <input name="short_decription" type="short_decription" class="form-control" id="short_decription" placeholder="Short Description">
+            </div>
+            <div class="form-group">
+                <label for="title">long Description</label>
+                <input name="long_description" type="long_description" class="form-control" id="long_description" placeholder="long Description">
+            </div>
+            <div class="form-group">
+                <label for="title">Price</label>
+                <input name="price" type="price" class="form-control" id="price" placeholder="Price">
+            </div>
+            <div class="form-group">
+                <label for="title">Select Category</label>
+                <select name="category_id" class="form-control form-control-sm" id="category_id">
+                    <option value="">Select</option>
+                    @foreach ($categories  as $category)
+                    <option  value="{{ $category->id }}">{{ $category->title }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="title">type</label>
+                <input name="type" type="type" class="form-control" id="type" placeholder="type">
+            </div>
+            <div class="form-group">
+                <label for="title">Select Brand</label>
+                <select name="brand_id" class="form-control form-control-sm" id="brand_id">
+                    <option value="">Select</option>
+                    @foreach ($brands  as $brand)
+                    <option  value="{{ $brand->id }}">{{ $brand->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formFileSm" class="form-label">thumbnail</label>
+                <input name="thumbnail" class="form-control form-control-sm " id="formFileSm" type="file">
+            </div>
+            <div class="form-group">
+            <label for="formFileSm" class="form-label">multiple</label>
+            <input name="images[]" multiple class="form-control form-control-sm " id="formFileSm" type="file">
+            </div>
+              <div class="form-group">
+                <label for="status">status</label>
+                <select name="status" class="form-control form-control-sm " id="status">
+                    <option value="0">In Active</option>
+                    <option value="1"> Active</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary me-2">Submit</button>
+            <button class="btn btn-light">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-md-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Horizontal Form</h4>
+          <p class="card-description">
+            Horizontal form layout
+          </p>
+          <form class="forms-sample">
+            <div class="form-group row">
+              <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Email</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Username">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="exampleInputMobile" class="col-sm-3 col-form-label">Mobile</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="exampleInputMobile" placeholder="Mobile number">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Password</label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">Re Password</label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control" id="exampleInputConfirmPassword2" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-check form-check-flat form-check-primary">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+                Remember me
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary me-2">Submit</button>
+            <button class="btn btn-light">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div> -->
+  </div>
+@endsection()

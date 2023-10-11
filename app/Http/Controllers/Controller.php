@@ -14,8 +14,10 @@ class Controller extends BaseController
     public function uploadImage($image, $folder = null)
     {
         $file = $image;
-        $fileName = md5($file->getClientOriginalName()) . time() . "." . $file->getClientOriginalExtension();
-        $file->move('./uploads/' . $folder, $fileName);
+        $fileName = $this->saveFile($file, $folder);
+        // $file = $image;
+        // $fileName = md5($file->getClientOriginalName()) . time() . "." . $file->getClientOriginalExtension();
+        // $file->move('./uploads/' . $folder, $fileName);
         return $fileName;
     }
 
@@ -25,4 +27,21 @@ class Controller extends BaseController
             unlink('uploads/'.$folder.'/'.$image);
         }
     }
+    public function updateImage($image, $old_image, $folder = null)
+    {
+        $file = $image;
+        $fileName = $this->saveFile($file, $folder);
+        if( $old_image != '' && file_exists('uploads/'.$folder.'/'.$old_image)){
+            unlink('uploads/'.$folder.'/'.$old_image);
+        }
+        return $fileName;
+    }
+    public function saveFile($file, $folder)
+    {
+        $fileName = md5($file->getClientOriginalName()) . time() . "." . $file->getClientOriginalExtension();
+        $file->move('./uploads/' . $folder, $fileName);
+        return $fileName;
+    }
+
+
 }

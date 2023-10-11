@@ -36,6 +36,24 @@
           <span class="menu-title">Faqs</span>
         </a>
       </li> <li class="nav-item">
+        <a class="nav-link" href="{{ route('admin.product.index') }}">
+          <i class="mdi mdi-grid-large menu-icon"></i>
+          <span class="menu-title">Products</span>
+        </a>
+      </li>
+    </li> <li class="nav-item">
+        <a class="nav-link" href="{{ route('admin.page.index') }}">
+          <i class="mdi mdi-grid-large menu-icon"></i>
+          <span class="menu-title">Pages</span>
+        </a>
+      </li>
+    </li> <li class="nav-item">
+        <a class="nav-link" href="{{ route('admin.blog.index') }}">
+          <i class="mdi mdi-grid-large menu-icon"></i>
+          <span class="menu-title">Blogs</span>
+        </a>
+      </li>
+    </li> <li class="nav-item">
         <a class="nav-link" href="{{ route('admin.blog.index') }}">
           <i class="mdi mdi-grid-large menu-icon"></i>
           <span class="menu-title">Blogs</span>

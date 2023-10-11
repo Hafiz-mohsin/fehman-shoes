@@ -10,5 +10,6 @@ Route::name('admin.')->prefix('admin')->group(function(){
     Route::resource('brand', 'Admin\BrandController');
     Route::resource('faq', 'Admin\FaqController');
     Route::resource('product', 'Admin\ProductController');
+    Route::resource('page', 'Admin\PageController');
 
 });
